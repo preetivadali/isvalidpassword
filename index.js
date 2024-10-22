@@ -1,10 +1,17 @@
  function isValidPassword(username, password){
-    if (password.length < 8){
+    if (password.length < 8){ 
        return false;
-    }
+    } // be atleast 8 characters
     if (password.includes(" ")) {
         return false;
-    }
-   else return true;
+    }//  cannot contain spaces 
+   else {return true;
+   }
+   if (password.toLowerCase().includes(username.toLowerCase())) {
+    return false;
 }
-console.log(isValidPassword("use12345" , "pass1234"));
+return true;
+}
+
+
+console.log(isValidPassword("Preeti" , "preeti567"));
